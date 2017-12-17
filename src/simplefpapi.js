@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Require route initiator functions ----------- //
-const mathRoutes = require('./app/routes/maths');
+const mathRoutes = require('./routes/maths');
 
 // ROUTES FOR API ------------------------------ //
 const router = express.Router();
@@ -23,9 +23,11 @@ function loadRoutes() {
   // Test route to make sure everything is working
   router.get('/', (req, res) => {
     res.status(200).json({
-      message: 'FlashCards-API is up and running!',
+      message: 'Maths-API is up and running!',
     });
   });
+  // User unprotected routes
+  mathRoutes(router);
   // REGISTER OUR ROUTES ------------------------- //
   app.use('/', router);
 }
@@ -35,7 +37,7 @@ function startServer() {
   loadRoutes();
   const port = process.env.PORT || 8001;
   app.listen(port, () => {
-    console.info(`API Server up and running on port ${port} in ${process.env.ENV} mode.`);
+    console.info(`API Server up and running on port ${port}`);
   });
 }
 

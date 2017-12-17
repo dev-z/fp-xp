@@ -9,7 +9,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}\\src\\medical.js"
+      "program": "${workspaceFolder}\\src\\simplefpapi.js"
     }
   ]
 }

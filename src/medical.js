@@ -7,7 +7,12 @@ const mockedDB = require('./dbmock')();
  * @returns {Inventory}
  */
 function updateInventory(trans, currentInventory) {
-  const { from, to, item, quantity } = trans;
+  const {
+    from,
+    to,
+    item,
+    quantity,
+  } = trans;
   const fromPath = R.lensPath([from, item]);
   const toPath = R.lensPath([to, item]);
 
