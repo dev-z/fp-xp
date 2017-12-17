@@ -1,6 +1,13 @@
-/* ----------------------------------------------- *
- *          FlashCards - API Server                *
- * ----------------------------------------------- */
+/* ------------------------------------------------------------------------ *
+ * 2. Simple REST API server built in one of the Node.js libraries like     *
+ * ExpressJS. The purpose is to make them see how trivial and useful FP is  *
+ * in real life apps.                                                       *
+ *                                                                          *
+ * It should expose 4 end points /add, /sub, /mul, div/ each taking two URL *
+ * params as numbers and returning the sum. eg. /add/4/5 gives 9            *
+ * It should validate that these are actual numbers and handle cases like   *
+ * divide by zero with appropriate HTTP return code.                        *
+ * ------------------------------------------------------------------------ */
 // Importing the core modules ------------------- //
 const express = require('express');
 const bodyParser = require('body-parser');
