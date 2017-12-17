@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/twhyderabad/fp-xp#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "eslint": "^4.12.0",
